@@ -12,7 +12,7 @@
 	
 	
 	//Conexão com o banco
-	$conexao = mysqlI_connect(hostname,username, password, dbname);
+	$conexao = mysqli_connect(hostname,username, password, dbname);
 
 
 								/* Script para testar a conexão com o banco. (Manter comentado após o teste)

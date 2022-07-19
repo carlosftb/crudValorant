@@ -3,16 +3,16 @@ require_once ('./Database.php');
 ?>
 <!DOCTYPE HTML>
 
-<link href="css/bootstrap.css" rel="strylesheet" type="text/css">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <header>
-<h1>Catalogo de informações dos agentes</h1>
+<h1 class="text-center">Catalogo de informações dos agentes</h1><br>
 </header>
 
 <body>
 
 <main>
     <section>
-        <table class="table">   
+        <table class="table table-striped-columns">   
         <thread>
             <tr>
                 <th>ID</th>
@@ -20,6 +20,8 @@ require_once ('./Database.php');
                 <th>Nacionalidade</th>
                 <th>Classe</th>
                 <th>É um radiante?</th>
+                <th> </th>
+                <th> </th>
             </tr>
         </theread>
         <tbody>
@@ -51,8 +53,8 @@ require_once ('./Database.php');
                         . "<td>$nacionalidade</td>"
                         . "<td>$classe</td>"
                         . "<td>$radiante</td>"
-                        . "<td><a href=editar.php?id=$id> ✎ </td>"
-                        . "<td><a href=deletar.php?id=$id&codinome=$codinome> [X] </a></td>"
+                        . "<td><a href=editar.php?id=$id> <div align='center'><button type='button' class='btn btn-outline-primary'> Editar </button></div></a> </td>"
+                        . "<td><a href=deletar.php?id=$id&codinome=$codinome><div align='center'><button type='button' class='btn btn-outline-danger'> Deletar </button></div></a></td>"
                         . "</tr>";//Exibe os dados capturados na busca
 
                 }
@@ -63,7 +65,7 @@ require_once ('./Database.php');
     </section> 
     
     <section>
-        <a href="cadastrar.php"> <button class="btn">Novo agente </button> </a>  
+        <a href="cadastrar.php"> <button class="btn btn-success">Novo agente </button> </a>  
     </section>   
 
 </main>
